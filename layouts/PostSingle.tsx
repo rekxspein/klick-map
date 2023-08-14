@@ -4,12 +4,21 @@ import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import Base from "./Baseof";
 
-const PostSingle = ({ frontmatter, content, mdxContent }) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const PostSingle = ({ frontmatter, content, mdxContent, authors, slug }) => {
+  // eslint-disable-next-line prefer-const
   let { description, title, image } = frontmatter;
   description = description ? description : content.slice(0, 120);
 
   return (
-    <Base title={title} description={description}>
+    <Base
+      title={title}
+      description={description}
+      meta_title={undefined}
+      noindex={undefined}
+      canonical={undefined}
+      image={undefined}
+    >
       <section className="section">
         <div className="container">
           <div className="row">

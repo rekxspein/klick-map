@@ -2,11 +2,11 @@
 title: "Contact Us"
 layout: "contact"
 draft: false
-info: 
+info:
   title: Why you should contact us!
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
-  contacts: 
-    - "phone: +88 125 256 452"
-    - "Mail: [info@bigspring.com](mailto:info@bigspring.com)"
-    - "Address: 360 Main rd, Rio, Brazil"
+  description: We value your feedback and inquiries! Our dedicated team is here to assist you with any questions, concerns, or suggestions you may have. Whether you're seeking product information, troubleshooting assistance, or simply want to share your thoughts, we're just a message away.
+  contacts:
+    - "Phone: +91 99633 82225"
+    - "Mail: [contact@lamzing.com](mailto:contact@lamzing.com)"
+    - "Address: Singjamei Chingamakha, Imphal, Manipur"
 ---

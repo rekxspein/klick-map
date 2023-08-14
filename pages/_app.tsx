@@ -4,20 +4,23 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 import "styles/style.scss";
+import type { AppProps } from "next/app";
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
   // default theme setup
 
   // import google font css
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
-  const [fontcss, setFontcss] = useState();
+  const [fontcss, setFontcss] = useState<string | undefined>();
   useEffect(() => {
     fetch(
       `https://fonts.googleapis.com/css2?family=${pf}${
         sf ? "&family=" + sf : ""
-      }&display=swap`
-    ).then((res) => res.text().then((css) => setFontcss(css)));
+      }&display=swap`,
+    )
+      .then((res) => res.text().then((css) => setFontcss(css)))
+      .catch((error) => console.log("Faced the following Error", error));
   }, [pf, sf]);
 
   // google tag manager (gtm)
@@ -30,7 +33,6 @@ const App = ({ Component, pageProps }) => {
         config.params.tag_manager_id &&
         TagManager.initialize(tagManagerArgs);
     }, 5000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -40,7 +42,7 @@ const App = ({ Component, pageProps }) => {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin="true"
+          crossOrigin="anonymous"
         />
         <style
           dangerouslySetInnerHTML={{

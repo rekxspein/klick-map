@@ -9,7 +9,7 @@ export const slugify = (content) => {
 };
 
 // markdownify
-export const markdownify = (content, tag, className) => {
+export const markdownify = (content, tag = "span", className = "") => {
   if (!content) return null;
 
   const Tag = tag;
@@ -56,7 +56,7 @@ export const plainify = (content) => {
 
 // strip entities for plainify
 const htmlEntityDecoder = (htmlWithEntities) => {
-  let entityList = {
+  const entityList = {
     "&nbsp;": " ",
     "&lt;": "<",
     "&gt;": ">",
@@ -64,11 +64,11 @@ const htmlEntityDecoder = (htmlWithEntities) => {
     "&quot;": '"',
     "&#39;": "'",
   };
-  let htmlWithoutEntities = htmlWithEntities.replace(
+  const htmlWithoutEntities = htmlWithEntities.replace(
     /(&amp;|&lt;|&gt;|&quot;|&#39;)/g,
     (entity) => {
       return entityList[entity];
-    }
+    },
   );
   return htmlWithoutEntities;
 };

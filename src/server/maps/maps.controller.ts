@@ -1,9 +1,9 @@
-import { Controller,Get } from '@nestjs/common';
+import { Controller, Get } from "@nestjs/common";
 
-@Controller('maps')
+@Controller("maps")
 export class MapsController {
-    @Get()
-    getMap() {
-        return {"name":"hi"};
-    }
+  @Get()
+  getMap() {
+    return { name: "hi" };
+  }
 }

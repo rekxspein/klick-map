@@ -33,7 +33,7 @@ const Posts = ({ posts }) => {
             <p className="text-text">
               {plainify(
                 posts[0].content?.slice(0, Number(summary_length)),
-                "div"
+                "div",
               )}
             </p>
             <Link
