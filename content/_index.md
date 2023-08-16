@@ -83,7 +83,7 @@ workflow:
 # call_to_action
 call_to_action:
   title: Ready to get started?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  content: Feel free to reach out through the provided contact form, and we'll make sure to respond promptly.
   image: "/images/cta.svg"
   button:
     enable: true

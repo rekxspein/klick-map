@@ -59,7 +59,7 @@ const Header = () => {
           <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
             {main.map((menu, i) => (
               <React.Fragment key={`menu-${i}`}>
-                {menu.hasChildren ? (
+                {menu.hasChildren && (
                   <li className="nav-item nav-dropdown group relative">
                     <span className="nav-link inline-flex items-center">
                       {menu.name}
@@ -80,7 +80,8 @@ const Header = () => {
                       ))}
                     </ul>
                   </li>
-                ) : (
+                )}
+                {
                   <li className="nav-item">
                     <Link
                       href={menu.url}
@@ -92,7 +93,7 @@ const Header = () => {
                       {menu.name}
                     </Link>
                   </li>
-                )}
+                }
               </React.Fragment>
             ))}
             {enable && (

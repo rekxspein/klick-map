@@ -2,15 +2,21 @@
   "main": [
     {
       "name": "Home",
-      "url": "/"
+      "url": "/",
+      "hasChildren": false,
+      "children": []
     },
     {
       "name": "Pricing",
-      "url": "/pricing"
+      "url": "/pricing",
+      "hasChildren": false,
+      "children": []
     },
     {
       "name": "Contact",
-      "url": "/contact"
+      "url": "/contact",
+      "hasChildren": false,
+      "children": []
     }
   ],
   "footer": [

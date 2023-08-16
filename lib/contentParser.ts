@@ -28,7 +28,7 @@ export const getListPage = async (filePath) => {
 };
 
 // get all single pages, ex: blog/post.md
-export const getSinglePage = (folder) => {
+export const getSinglePage = (folder: string) => {
   const filesPath = fs.readdirSync(path.join(folder));
   const sanitizeFiles = filesPath.filter((file) => file.includes(".md"));
   const filterSingleFiles = sanitizeFiles.filter((file) =>

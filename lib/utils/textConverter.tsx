@@ -12,7 +12,7 @@ export const slugify = (content) => {
 export const markdownify = (content, tag = "span", className = "") => {
   if (!content) return null;
 
-  const Tag = tag;
+  const Tag = tag as any;
   return tag ? (
     <Tag
       className={className}
@@ -32,7 +32,7 @@ export const markdownify = (content, tag = "span", className = "") => {
 };
 
 // humanize
-export const humanize = (content) => {
+export const humanize = (content: string) => {
   if (!content) return null;
 
   return content
@@ -44,7 +44,7 @@ export const humanize = (content) => {
 };
 
 // plainify
-export const plainify = (content) => {
+export const plainify = (content: any) => {
   if (!content) return null;
 
   const mdParsed = marked.parseInline(String(content));
@@ -55,7 +55,7 @@ export const plainify = (content) => {
 };
 
 // strip entities for plainify
-const htmlEntityDecoder = (htmlWithEntities) => {
+const htmlEntityDecoder = (htmlWithEntities: string) => {
   const entityList = {
     "&nbsp;": " ",
     "&lt;": "<",
